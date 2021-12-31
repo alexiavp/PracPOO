@@ -9,3 +9,5 @@ Packages:
 5. visitor: implemented visitor design pattern in the previous composite 
 6. observer: implemented observer and dynamic proxy design pattern 
 7. Test: two clases for UnitTest and examples to prove how all the features implemented work
+
+Some examples of files to help test the methods
