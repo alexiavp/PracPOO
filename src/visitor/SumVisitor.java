@@ -6,23 +6,23 @@ import dataFrame.DataFrame;
  * Class implements the adder visitor
  */
 public class SumVisitor extends Visitor {
-    private final String filtro;
-    private int suma = 0;
+    private final String filter;
+    private int sum = 0;
 
     /**
      * Constructor
-     * @param filtro to do
+     * @param filter to do
      */
-    public SumVisitor(String filtro) {
-        this.filtro = filtro;
+    public SumVisitor(String filter) {
+        this.filter = filter;
     }
 
     /**
      * Getter
-     * @return the suma
+     * @return the sum
      */
-    public int getSuma() {
-        return suma;
+    public int getSum() {
+        return sum;
     }
 
     /**
@@ -31,10 +31,10 @@ public class SumVisitor extends Visitor {
      */
     @Override
     public void visit(DataFrame df) {
-        if (df.data.containsKey(filtro)) {
+        if (df.data.containsKey(filter)) {
             try {
-                for (String i : df.data.get(filtro)) {
-                    suma += Integer.parseInt(i);
+                for (String i : df.data.get(filter)) {
+                    sum += Integer.parseInt(i);
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Can't filter this, it's not a number");

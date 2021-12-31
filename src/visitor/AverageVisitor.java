@@ -6,16 +6,16 @@ import dataFrame.DataFrame;
  * Class implements the average visitor
  */
 public class AverageVisitor extends Visitor {
-    private final String filtro;
+    private final String filter;
     private int average = 0;
     private int nItems = 0;
 
     /**
      * Constructor
-     * @param filtro to do
+     * @param filter to do
      */
-    public AverageVisitor(String filtro) {
-        this.filtro = filtro;
+    public AverageVisitor(String filter) {
+        this.filter = filter;
     }
 
     /**
@@ -32,9 +32,9 @@ public class AverageVisitor extends Visitor {
      */
     @Override
     public void visit(DataFrame df) {
-        if (df.data.containsKey(filtro)) {
+        if (df.data.containsKey(filter)) {
             try {
-                for (String i : df.data.get(filtro)) {
+                for (String i : df.data.get(filter)) {
                     nItems++;
                     average += Integer.parseInt(i);
                 }

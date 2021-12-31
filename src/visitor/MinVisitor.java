@@ -6,15 +6,15 @@ import dataFrame.DataFrame;
  */
 public class MinVisitor extends Visitor {
 
-    private final String filtro;
+    private final String filter;
     private int min = Integer.MAX_VALUE;
 
     /**
      * Constructor
-     * @param filtro to do
+     * @param filter to do
      */
-    public MinVisitor(String filtro) {
-        this.filtro = filtro;
+    public MinVisitor(String filter) {
+        this.filter = filter;
     }
 
     /**
@@ -31,9 +31,9 @@ public class MinVisitor extends Visitor {
      */
     @Override
     public void visit(DataFrame df) {
-        if (df.data.containsKey(filtro)) {
+        if (df.data.containsKey(filter)) {
             try {
-                for (String i : df.data.get(filtro)) {
+                for (String i : df.data.get(filter)) {
                     min = Math.min(min, Integer.parseInt(i));
                 }
             } catch (NumberFormatException e) {

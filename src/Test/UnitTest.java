@@ -70,27 +70,32 @@ class UnitTest {
         @Test
         void TestCompositeAndVisitor() {
             System.out.println("->Testing Composite and Visitor...");
-            Directory dir_dataframes = new Directory("Directory_dataframes");
-            Directory dir_csv = new Directory("Directory_csv");
-            Directory dir_json = new Directory("Directory_json");
-            dir_dataframes.addChild(dir_csv);
-            dir_dataframes.addChild(dir_json);
-            DataFrameComposite json = new DataFrameComposite(new JSONFile().readFile("cities.json"));
-            DataFrameComposite csv = new DataFrameComposite(new CSVFile().readFile("cities.csv"));
-            dir_json.addChild(json);
-            dir_csv.addChild(csv);
-            assertEquals(256, dir_dataframes.size());
-            assertEquals(128, json.size());
-            assertEquals(128, csv.size());
-            MaxVisitor maxV = new MaxVisitor("LatD");
-            dir_dataframes.accept(maxV);
-            assertEquals(50, maxV.getMax());
-            AverageVisitor avV = new AverageVisitor("LatD");
-            dir_dataframes.accept(avV);
-            assertEquals(38.8203125, avV.getAverage());
-            SumVisitor sumV = new SumVisitor("LatD");
-            dir_dataframes.accept(sumV);
-            assertEquals(9938, sumV.getSuma());
+            Directory dirDF = new Directory("dataFramesDirectory");
+            Directory dirCSV = new Directory("CSVDirectory");
+            Directory dirJSON = new Directory("JSONDirectory");
+            Directory dirTXT =  new Directory("TXTDirectory");
+            dirDF.addChild(dirCSV);
+            dirDF.addChild(dirJSON);
+            dirDF.addChild(dirTXT);
+            DataFrameComposite json = new DataFrameComposite(new JSONFile().readFile("test.json"));
+            DataFrameComposite csv = new DataFrameComposite(new CSVFile().readFile("test.csv"));
+            DataFrameComposite txt = new DataFrameComposite(new TXTFile().readFile("test.txt"));
+            dirJSON.addChild(json);
+            dirCSV.addChild(csv);
+            dirTXT.addChild(txt);
+            assertEquals(6, dirDF.size());
+            assertEquals(2, json.size());
+            assertEquals(2, csv.size());
+            assertEquals(2, txt.size());
+            MaxVisitor maxV = new MaxVisitor("Units Sold");
+            dirDF.accept(maxV);
+            assertEquals(9801, maxV.getMax());
+            AverageVisitor avV = new AverageVisitor("Units Sold");
+            dirDF.accept(avV);
+            assertEquals(6664.5, avV.getAverage());
+            SumVisitor sumV = new SumVisitor("Units Sold");
+            dirDF.accept(sumV);
+            assertEquals(39987.0, sumV.getSum());
         }
 
         @Test
