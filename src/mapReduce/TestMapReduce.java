@@ -1,6 +1,6 @@
 package mapReduce;
 
-import main.Test;
+import Test.Examples;
 import dataFrame.DataFrame;
 import factory.CSVFile;
 import factory.JSONFile;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Class with the test of the mapReduce
  */
-public class TestMapReduce extends Test {
+public class TestMapReduce extends Examples {
 
     /**
      * Function testMapReduce

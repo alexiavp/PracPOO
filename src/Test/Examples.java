@@ -1,4 +1,4 @@
-package main;
+package Test;
 
 import factory.TestFactory;
 import mapReduce.TestMapReduce;
@@ -8,7 +8,7 @@ import visitor.*;
 /**
  * Class with the general test
  */
-public class Test {
+public class Examples {
     /**
      * General main
      * @param args for the main

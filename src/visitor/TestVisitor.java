@@ -20,18 +20,18 @@ public class TestVisitor {
         DataFrameComposite csv = new DataFrameComposite( new CSVFile().readFile("cities.csv"));
         dir_json.addChild(json);
         dir_csv.addChild(csv);
-        System.out.println(dir_dataframes.size());
-        System.out.println(json.size());
-        System.out.println(csv.size());
+        System.out.println("The size of the directory of the DataFrames: "+dir_dataframes.size());
+        System.out.println("The size of the JSON file: "+json.size());
+        System.out.println("The size of the CSV file: "+csv.size());
         MaxVisitor maxV = new MaxVisitor("LatD");
         dir_dataframes.accept(maxV);
-        System.out.println(maxV.getMax());
+        System.out.println("The maximum value in LatD: "+maxV.getMax());
         AverageVisitor avV = new AverageVisitor("LatD");
         dir_dataframes.accept(avV);
-        System.out.println(avV.getAverage());
+        System.out.println("The average value in LatD: "+avV.getAverage());
         SumVisitor sumV = new SumVisitor("LatD");
         dir_dataframes.accept(sumV);
-        System.out.println(sumV.getSuma());
+        System.out.println("The sum of all the values in LatD: "+sumV.getSuma());
         dir_csv.removeChild(csv);
 
         //TODO: ACABAR DE FER EL TEST PER AL VISITOR

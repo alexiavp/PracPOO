@@ -1,13 +1,13 @@
 package factory;
 
-import main.*;
+import Test.*;
 import dataFrame.*;
 import java.util.*;
 
 /**
  * Class with the test for the factory
  */
-public class TestFactory extends Test{
+public class TestFactory extends Examples {
 
     /**
      * Method testFactory
@@ -40,8 +40,5 @@ public class TestFactory extends Test{
         System.out.println("\nTesting functions query and sort optimized...");
         System.out.println("Function query2, shows cities named Winnipeg:\n"+result.query2("City", (String a) -> a.equals("Winnipeg")));
         System.out.println("sort2: \nCSV Descending:\n"+result.sort2("City", Comparator.reverseOrder())+"\nJSON Ascending\n"+result2.sort2("LatM", Comparator.naturalOrder()));
-
-
-
     }
 }

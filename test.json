@@ -1,0 +1,25 @@
+[
+  {
+    "LatD": 41,
+    "LatM": 5,
+    "LatS": 59,
+    "NS": "N",
+    "LonD": 80,
+    "LonM": 39,
+    "LonS": 0,
+    "EW": "W",
+    "Country": "Portugal",
+    "State": "OH"
+  },
+  {
+    "LatD": 42,
+    "LatM": 52,
+    "LatS": 48,
+    "NS": "N",
+    "LonD": 97,
+    "LonM": 23,
+    "LonS": 23,
+    "EW": "W",
+    "Country": "Portugal",
+    "State": "SD"
+  }]
