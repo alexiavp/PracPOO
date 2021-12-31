@@ -6,7 +6,13 @@ import dataFrame.DataFrame;
  * Class implements the adder visitor
  */
 public class SumVisitor extends Visitor {
+    /**
+     * Variable of the class
+     */
     private final String filter;
+    /**
+     * Variable where the sum will be saved
+     */
     private int sum = 0;
 
     /**

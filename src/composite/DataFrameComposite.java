@@ -10,6 +10,9 @@ import java.util.List;
  */
 public class DataFrameComposite extends DataFrame implements Composite {
 
+    /**
+     * Variable of the class
+     */
     private Composite dad;
 
     /**

@@ -9,7 +9,13 @@ import java.util.stream.Collectors;
  * Class implements the principal methods for the DataFrame
  */
 public class DataFrame implements DataFrameInterface,Iterable<ArrayList<String>> {
+    /**
+     * Variables name for the dataFrame
+     */
     private final String name;
+    /**
+     * Variable data for the dataFrame
+     */
     public LinkedHashMap<String, ArrayList<String>> data;
 
     /**

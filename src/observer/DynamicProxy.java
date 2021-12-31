@@ -9,7 +9,10 @@ import java.lang.reflect.Proxy;
  * Class with the DynamicProxy implemented
  */
 public class DynamicProxy implements InvocationHandler {
-    private Object target = null;
+    /**
+     * Variable of the class
+     */
+    private Object target;
 
     /**
      * Creates an instence of the proxy

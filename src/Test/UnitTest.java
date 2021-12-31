@@ -20,6 +20,9 @@ import java.util.Comparator;
  */
 class UnitTest {
 
+    /**
+     * Method main to call all the tests
+     */
     public static class main{
         /**
          * Test method for Read and operations in DataFrame
@@ -47,6 +50,10 @@ class UnitTest {
             names.add("Portugal");
             assertEquals(names, read.sort2("Country", Comparator.naturalOrder()));
         }
+
+        /**
+         * Test for mapReduce
+         */
         @Test
         void TestMapReduce() {
             System.out.println("->Testing MapReduce...");
@@ -67,6 +74,10 @@ class UnitTest {
             result.add(names);
             assertEquals(result, MapReduce.mapReduce(list, imap, red, "Country", null));
         }
+
+        /**
+         * Test for Composite and Visitor
+         */
         @Test
         void TestCompositeAndVisitor() {
             System.out.println("->Testing Composite and Visitor...");
@@ -98,8 +109,11 @@ class UnitTest {
             assertEquals(39987.0, sumV.getSum());
         }
 
+        /**
+         * Test for Observer
+         */
         @Test
-                void TestObserver(){
+        void TestObserver(){
             System.out.println("->Testing Observer...");
             CSVFile readTest = new CSVFile();
             TXTFile readTest2 = new TXTFile();

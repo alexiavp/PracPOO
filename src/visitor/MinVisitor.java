@@ -6,7 +6,13 @@ import dataFrame.DataFrame;
  */
 public class MinVisitor extends Visitor {
 
+    /**
+     * Variable of the class
+     */
     private final String filter;
+    /**
+     * Variable where the minimum is saved
+     */
     private int min = Integer.MAX_VALUE;
 
     /**

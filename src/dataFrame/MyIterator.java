@@ -8,11 +8,18 @@ import java.util.Iterator;
  */
 public class MyIterator extends DataFrame implements Iterator<ArrayList<String>> {
 
+    /**
+     * Variables of the class
+     */
     protected int pos;
+    /**
+     * Boolean that says if it can be removed
+     */
     boolean canRemove = false;
 
     /**
      * Constructor
+     * @param info of the dataFrame
      */
     public MyIterator(DataFrame info) {
         super(info);

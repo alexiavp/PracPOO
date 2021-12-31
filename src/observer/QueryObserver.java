@@ -9,7 +9,9 @@ import java.util.function.Predicate;
  * Logs operations that satisfy a filter
  */
 public class QueryObserver extends DataFrame implements DataFrameObserver{
-
+    /**
+     * Variable of the class
+     */
     private ArrayList<String> listFunc;
 
     /**

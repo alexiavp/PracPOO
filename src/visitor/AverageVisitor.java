@@ -6,9 +6,19 @@ import dataFrame.DataFrame;
  * Class implements the average visitor
  */
 public class AverageVisitor extends Visitor {
+
+    /**
+     * Variables of the class
+      */
     private final String filter;
-    private int average = 0;
-    private int nItems = 0;
+    /**
+     * Variable where the average is saved
+     */
+    private int average;
+    /**
+     * Variable where the number of items are saved
+     */
+    private int nItems ;
 
     /**
      * Constructor
@@ -16,6 +26,8 @@ public class AverageVisitor extends Visitor {
      */
     public AverageVisitor(String filter) {
         this.filter = filter;
+        average=0;
+        nItems=0;
     }
 
     /**

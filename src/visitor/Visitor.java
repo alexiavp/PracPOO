@@ -9,7 +9,7 @@ import dataFrame.DataFrame;
 public abstract class Visitor {
     /**
      *
-     * @param dir
+     * @param dir name of the directory
      */
     public void visit(Directory dir) {
         for (Composite fill : dir.getChildren()) {
@@ -18,8 +18,8 @@ public abstract class Visitor {
     }
 
     /**
-     *
-     * @param df
+     * Interface for visit method
+     * @param df DataFrame info
      */
     public abstract void visit(DataFrame df);
 

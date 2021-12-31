@@ -6,7 +6,13 @@ import dataFrame.DataFrame;
  * Class implements the max visitor
  */
 public class MaxVisitor extends Visitor {
+    /**
+     * Variables of the class
+     */
     private final String filter;
+    /**
+     * Variable where the maximum is saved
+     */
     private int max = Integer.MIN_VALUE;
 
     /**

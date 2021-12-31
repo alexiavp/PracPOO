@@ -12,7 +12,9 @@ import java.util.Scanner;
  * Class with the general test
  */
 public class Examples {
-
+    /**
+     * Variable of the class
+     */
     static Scanner key = new Scanner(System.in);
 
     /**

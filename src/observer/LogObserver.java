@@ -11,6 +11,9 @@ import java.util.function.Predicate;
  */
 public class LogObserver extends DataFrame implements DataFrameObserver {
 
+    /**
+     * Variable of the class
+     */
     private ArrayList<String> listFunc;
 
     /**

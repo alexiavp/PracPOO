@@ -8,8 +8,17 @@ import java.util.*;
  * Class implementation of Directory for the Composite
  */
 public class Directory implements Composite {
+    /**
+     * Variables of the class
+     */
     private final String name;
+    /**
+     * List with all the children of the directory
+     */
     private final List<Composite> children;
+    /**
+     * Dad of the directory
+     */
     private Composite dad;
 
     /**
@@ -145,6 +154,10 @@ public class Directory implements Composite {
         return result.toString();
     }
 
+    /**
+     * Method Getter
+     * @return the children
+     */
     public List<Composite> getChildren() {
         return this.children;
     }
