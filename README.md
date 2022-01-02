@@ -1,4 +1,6 @@
-# PracPOO: First practice of programming advanced techniques (TAP) in the University Rovira i Virgili
+# PracPOO: First practice of programming advanced techniques (TAP)
+in the University Rovira i Virgili
+
 Authors: Jordi Llatser and Alexia Vidal
 
 Packages:
@@ -11,3 +13,6 @@ Packages:
 7. Test: two clases for UnitTest and examples to prove how all the features implemented work
 
 Some examples of files to help test the methods
+----------------------------------------------------------------------------------------------------
+https://github.com/alexiavp/PracPOO.git
+----------------------------------------------------------------------------------------------------
